@@ -2,7 +2,7 @@
 
 Two directly connected switches plus a host for each switch:
 
-   host --- switch --- switch --- host
+   host --- switch --- switch --- switch --- host
 
 Adding the 'topos' dict with a key/value pair to generate our newly defined
 topology enables one to pass in '--topo=mytopo' from the command line.
@@ -45,20 +45,5 @@ class MyTopo( Topo ):
             links.append(self.addLink(hosts[i], switches[0]))
         for i in range(split,host_number):
             links.append(self.addLink(hosts[i], switches[-1]))
-            
-        
-
-        '''
-        # Add hosts and switches
-        leftHost = self.addHost( 'h1' )
-        rightHost = self.addHost( 'h2' )
-        leftSwitch = self.addSwitch( 's3' )
-        rightSwitch = self.addSwitch( 's4' )
-
-        # Add links
-        self.addLink( leftHost, leftSwitch )
-        self.addLink( leftSwitch, rightSwitch )
-        self.addLink( rightSwitch, rightHost )
-        '''
 
 topos = { 'mytopo': ( lambda: MyTopo() ) }

@@ -1,5 +1,5 @@
-this is my final project of high performance router desigh course
-
+* this is my final project of high performance router desigh course
+* Reference paper: Compact TCAM- Flow Entry Compaction in TCAM for Power Aware SDN
 ## description:
 * topo.sh: mininet topology laucher
 * ryu_exe.sh: Ryu controller laucher
